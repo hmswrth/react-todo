@@ -1,12 +1,14 @@
 import React from "react";
+import "./App.scss";
 
-export default function Todo({ todo, toggleTodo }) {
+function Todo({ todo, toggleTodo }) {
   function handleCheck() {
     toggleTodo(todo.id);
   }
   return (
     <div>
       <input
+        className="checkbox"
         type="checkbox"
         checked={todo.complete}
         onChange={handleCheck}
@@ -15,3 +17,5 @@ export default function Todo({ todo, toggleTodo }) {
     </div>
   );
 }
+
+export default Todo;
